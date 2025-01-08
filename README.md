@@ -34,4 +34,4 @@ Cleaning: Remaining_lease data is in XX years XX months format. Not in numerical
 Cleaning: for files without Remaining_lease add a column, replace blank values with a zero as integer	
 Cleaning: 4 files are found with same headers and values are combined into one file named as "hdb.csv"
 
-The intention is to use it for PowerBI and Python analysis
+The intention is to use it for PowerBI and Python analysis to gain useful insights into the HDB resale market.
