@@ -234,13 +234,22 @@ XXXXX TBC
 Based on the project's objectives, create at least five visualizations using Python or Power BI. 
 Explain your choice of visualization type and tool for each.
 
-Boxplot of resale price help:
-a. Reasons why Boxplot is selected, better understand factors contribute to shewness and presence of outliers
-b. Better handle estimate impact on statistical analysis
-
 Pairplot:
 a. Able to do correlation checks between targeted variable "resale price" versus variables in the dataset.
 b. Able to spot outliers and weak correlationship between variables
+
+Lineplots:
+a. Able to see trends over time, easy spot, thus prediction of future prices
+
+![image](https://github.com/user-attachments/assets/e17b62c7-a0b1-4977-8eb7-7521c8a36bc7)
+
+![image](https://github.com/user-attachments/assets/6adf904a-5aa6-49e4-b323-1b55b41e806b)
+
+![image](https://github.com/user-attachments/assets/0e28db7f-1829-46c1-8461-ef85a2ff0b85)
+
+![image](https://github.com/user-attachments/assets/0c46b568-8466-4b59-9d1e-1fc5c7b1f6c1)
+
+
 
 4. Model Development:
 
