@@ -44,7 +44,9 @@ Use Text to limit to split out the text. For XX months, change XX/10 to get deci
 
 The intention is to use it for PowerBI and Python analysis to gain useful insights into the HDB resale market.
 
-1. Articulate the size and shape of the dataset AND 2. Comment on data quality with respect to null values or missing data.
+
+1. Articulate the size and shape of the dataset AND
+2. Comment on data quality with respect to null values or missing data.
 
 Articulate the size and shape of the dataset :
 
