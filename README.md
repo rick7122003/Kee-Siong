@@ -58,6 +58,9 @@ Comment on data quality with respect to null values or missing data :
 a. Output shows no null or empty values after cleaning;
 b. Remove need for further data imputation and promote better analysis.
 
+![image](https://github.com/user-attachments/assets/c4e8eccf-c40c-4086-972f-788fd7f2dec8)
+
+
 
 # Overall information about the dataset
 
@@ -321,6 +324,11 @@ especially if they seem inconsistent with typical construction timelines.
 
 7. Create plots for each categorical column, showing categorical feature distributions.
 
+![image](https://github.com/user-attachments/assets/ccb3430f-5683-4f78-8055-a6957031dcc8)
+
+![image](https://github.com/user-attachments/assets/ec7266aa-1ef3-4e56-b30e-7c442ae3d03a)
+
+![image](https://github.com/user-attachments/assets/4ebf5db1-11ab-4253-83e0-b88d623aaa50)
 
 
 8. Generate appropriate charts for numerical features, both individually and in relation to the target column.
