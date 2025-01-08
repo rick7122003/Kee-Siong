@@ -43,3 +43,50 @@ Use Text to limit to split out the text. For XX months, change XX/10 to get deci
 8. Cleaning: 4 files are found with same headers and values are combined into one file named as "hdb.csv"
 
 The intention is to use it for PowerBI and Python analysis to gain useful insights into the HDB resale market.
+
+1. Articulate the size and shape of the dataset AND 2. Comment on data quality with respect to null values or missing data.
+
+Articulate the size and shape of the dataset :
+
+a. Size: Total: 628591 rows | memory usage: 52.8+ MB
+b. Shape: 11 columns: 7 objects, 2 Float64, 2 int64 | 628591 rows 
+
+Comment on data quality with respect to null values or missing data :
+
+a. Output shows no null or empty values after cleaning;
+b. Remove need for further data imputation and promote better analysis.
+
+
+# Overall information about the dataset
+hdb.info()
+
+![image](https://github.com/user-attachments/assets/08fe7e95-a9b9-4966-a889-b0c63bc04306)
+
+
+
+# Statistical description of the data
+hdb.describe()
+
+![image](https://github.com/user-attachments/assets/ca615d9f-6650-4db3-bec0-b367603a3ca9)
+
+
+3. Describe the data types of all features.
+Data Types of Features:
+
+float64 (2 columns):
+
+floor area sqm: Likely represents the area of the apartment in square meters.
+remaining Lease: Likely represents the remaining lease duration in years or some other unit.
+int64 (2 columns):
+
+lease commence date: Likely represents the year in which the lease for the property commenced.
+resale price: Represents the selling price of the property.
+object (7 columns):
+
+month: Likely represents the month of the transaction (e.g., '2023-01').
+town: Represents the location of the property (e.g., "Singapore", "London").
+flat type: Categorizes the type of apartment (e.g., "1-room", "3-room").
+block: Likely identifies the specific building within a housing complex.
+street name: Name of the street where the property is located.
+storey range: Range of floors for the apartment (e.g., '1-5', '10-15').
+flat model: Specific model or design of the apartment.
