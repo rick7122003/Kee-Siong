@@ -60,7 +60,12 @@ b. Remove need for further data imputation and promote better analysis.
 
 
 # Overall information about the dataset
-hdb.info()
+
+df.head( )
+
+![image](https://github.com/user-attachments/assets/8cb8544c-1cec-4e5c-bd77-1c58d45d3add)
+
+hdb.info( )
 
 ![image](https://github.com/user-attachments/assets/08fe7e95-a9b9-4966-a889-b0c63bc04306)
 
