@@ -4,6 +4,15 @@ SCTP Data Analyst Associate Capstone
 Data Analytics Dashboard and Exploration Data Analysis of HDB resale Market (2000 Feb to 2024 Jan)
 ![image](https://github.com/user-attachments/assets/99356a64-d893-49c6-b58c-de09370d4a62)
 
+Data Summary:
+Data comprise of HDB resale transaction prices from (2000 Feb to 2024 Jan). It include town names, flat types, floor area sqm, flat model,
+lease commence date, resales price and remaining lease.
+Dataset is large enough and comprehensive for deep dived into predicting trends and insights into the HDB flat resale market.
+Data size has a total of 628591
+
+Assumption:
+As portions of remaining Lease (years) are incomplete, this value will not be included in the analysis due to impact on statistical analyses 
+and skew the results of hypothesis tests. Instead, we will look at lease commence date data header.
 
 Description of Data:
 4 csv files extracted as follows:
