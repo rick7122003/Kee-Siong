@@ -1,7 +1,8 @@
 # Kee-Siong
 SCTP Data Analyst Associate Capstone
 
-Data Analytics Dashboard and Exploration Data Analysis of HDB resale Market (2000 feb to 2024 Jan):
+Data Analytics Dashboard and Exploration Data Analysis of HDB resale Market (2000 Feb to 2024 Jan)
+![image](https://github.com/user-attachments/assets/99356a64-d893-49c6-b58c-de09370d4a62)
 
 
 Description of Data:
