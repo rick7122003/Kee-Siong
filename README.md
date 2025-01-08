@@ -223,11 +223,24 @@ But we will disregard this part due to some data values are empty.
 11. Summarize findings from these EDA steps, highlighting key insights and implications for the project.
 
 
+XXXXX TBC
+XXXXX TBC
+XXXXX TBC
+XXXXX TBC
+
 
 3. Visual Exploration:
 
 Based on the project's objectives, create at least five visualizations using Python or Power BI. 
 Explain your choice of visualization type and tool for each.
+
+Boxplot of resale price help:
+a. Reasons why Boxplot is selected, better understand factors contribute to shewness and presence of outliers
+b. Better handle estimate impact on statistical analysis
+
+Pairplot:
+a. Able to do correlation checks between targeted variable "resale price" versus variables in the dataset.
+b. Able to spot outliers and weak correlationship between variables
 
 4. Model Development:
 
