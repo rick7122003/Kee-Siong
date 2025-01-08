@@ -334,12 +334,34 @@ especially if they seem inconsistent with typical construction timelines.
 8. Generate appropriate charts for numerical features, both individually and in relation to the target column.
 
 
+![image](https://github.com/user-attachments/assets/fd0fa851-28cd-4ab3-a282-070927adae46)
+
+
 
 9. Calculate and display correlations between numerical features and the target feature.
 
 
+![image](https://github.com/user-attachments/assets/87f31343-2be4-41cb-a1aa-c7fc5e03b8df)
+
+
 10. Identify any other significant relationships or patterns within the data.
 
+
+Correlation Matrix Summary:
+
+Correlation: floor area sqm       Versus resale price: 0.53
+Correlation: lease commence date  Versus resale price: 0.47
+Correlation: remaining Lease      Versus resale price: 0.54
+
+Floor area sqm and resale price: A strong positive correlation (0.53) is observed. 
+data indicate as the floor area sqm increases, the resale price increase as well.
+
+lease commence date and resale price: A moderate positive correlation (0.47) is observed. 
+This indicates that properties with more recent lease commencement dates (newer properties) have moderate higher resale prices.
+
+Remaining Lease and resale price: A moderate positive correlation (0.54) is observed. 
+This suggests that properties with longer remaining lease durations tend to have higher resale prices.
+But we will disregard this part due to some data values are empty.
 
 
 11. Summarize findings from these EDA steps, highlighting key insights and implications for the project.
