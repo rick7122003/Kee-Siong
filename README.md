@@ -340,6 +340,7 @@ especially if they seem inconsistent with typical construction timelines.
 
 9. Calculate and display correlations between numerical features and the target feature.
 
+![image](https://github.com/user-attachments/assets/c72c3eea-861e-4a94-9902-3c11a9722ab3)
 
 ![image](https://github.com/user-attachments/assets/87f31343-2be4-41cb-a1aa-c7fc5e03b8df)
 
