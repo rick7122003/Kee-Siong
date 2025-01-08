@@ -127,7 +127,7 @@ Data columns (total 11 columns):
  10  remaining Lease      628591 non-null  float64
 dtypes: float64(2), int64(2), object(7)
 memory usage: 52.8+ MB
-None
+
 
 Descriptive statistics for the entire dataset:
 
