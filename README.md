@@ -223,6 +223,7 @@ But we will disregard this part due to some data values are empty.
 11. Summarize findings from these EDA steps, highlighting key insights and implications for the project.
 
 
+
 3. Visual Exploration:
 
 Based on the project's objectives, create at least five visualizations using Python or Power BI. 
