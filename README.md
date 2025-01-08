@@ -311,6 +311,8 @@ Lease commence date will be considered in this report for more accuracy.
 Very Early Dates: Properties with extremely early lease commencement dates (e.g., significantly before the average), 
 especially if they seem inconsistent with typical construction timelines.
 
+![image](https://github.com/user-attachments/assets/5e5b667e-b8d1-4860-88ab-bb0ef1db089e)
+
 
 7. Create plots for each categorical column, showing categorical feature distributions.
 
