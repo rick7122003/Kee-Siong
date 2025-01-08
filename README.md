@@ -75,18 +75,39 @@ Data Types of Features:
 
 float64 (2 columns):
 
-floor area sqm: Likely represents the area of the apartment in square meters.
-remaining Lease: Likely represents the remaining lease duration in years or some other unit.
+floor area sqm: The floor area of the residential flat in square meters, indicating the size of the unit.
+remaining Lease: The remaining lease period of the residential flat in years.
+
 int64 (2 columns):
 
-lease commence date: Likely represents the year in which the lease for the property commenced.
-resale price: Represents the selling price of the property.
+lease commence date: The year in which the lease for the residential flat started.
+resale price: The price at which the residential flat was resold.
+
 object (7 columns):
 
-month: Likely represents the month of the transaction (e.g., '2023-01').
-town: Represents the location of the property (e.g., "Singapore", "London").
-flat type: Categorizes the type of apartment (e.g., "1-room", "3-room").
-block: Likely identifies the specific building within a housing complex.
+month: The month of the transaction or record.
+town: The town or area where the residential flat is situated.
+flat type: The type of the residential flat, such as 1-room, 2-room, 3-room, etc.
+block: The block number or identifier of the residential unit.
 street name: Name of the street where the property is located.
-storey range: Range of floors for the apartment (e.g., '1-5', '10-15').
-flat model: Specific model or design of the apartment.
+storey range: The range of storeys where the residential flat is located in the building.
+flat model: The model or type of the residential flat, which indicates the layout and design.
+
+
+4. Select a target column for analysis.
+
+The resale price is the targetted column for analysis. It is the most main value used for analysing
+and predicting modelling on HDB resale market. 
+
+Resale price has business relevance to help homebuyers, real estate investors, government agencies, researchers 
+to research and make informed prediction and decisions in summary.
+
+Resale price when correlating with features in the dataframe contribute to analysis considerations:
+
+Relationship between price versus town, flat type, lease commencement date, month in the dataframe (i.e. refers transaction period)
+would offer choices for suitable model selection (e.g., R-squared, Mean Squared Error, Root Mean Squared Error), 
+more accurate trend prediction and identify areas of market demand and supply.
+Insights can be gained in housing market and informed decisions can be made available by various stakeholders.
+
+
+
