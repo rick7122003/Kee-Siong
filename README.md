@@ -125,7 +125,9 @@ Insights can be gained in housing market and informed decisions can be made avai
 
 5. Provide descriptive statistics and information for the entire dataset.
 
+
 information for the entire dataset:
+
 
 <class 'pandas.core.frame.DataFrame'>
 RangeIndex: 628591 entries, 0 to 628590
@@ -149,7 +151,9 @@ memory usage: 52.8+ MB
 
 Descriptive statistics for the entire dataset:
 
+
 ![image](https://github.com/user-attachments/assets/3fbef9b8-39b2-41b4-81f9-6d704549c2da)
+
 
 ![image](https://github.com/user-attachments/assets/8b2a01b0-b462-480e-bc30-501ed79b6d5c)
 
@@ -166,32 +170,42 @@ This suggests the presence of very high-priced properties, which could be consid
 Low Prices: While the minimum value (28,000) doesn't seem extremely low, it's worth investigating properties with very low prices to see 
 if they are genuine or potentially erroneous data.
 
+
 2. floor area sqm:
 
 Large Flat: The maximum value of 297 sqm suggests the presence of very large apartments. While not inherently outliers, 
 it's worth examining if these extremely large apartments are consistent with typical market sizes for the given location.
 
+
 Small Flat: The minimum value of 28 sqm might indicate very small apartments, which could be outliers if 
 they are significantly smaller than typical units in the dataset.
 
+
 3. Remaining Lease:
+
 
 Will not discussed remaining lease as significant missing data are to be missing. 
 Lease commence date will be considered in this report for more accuracy.
 
+
 4. lease commence date:
+
 
 Very Early Dates: Properties with extremely early lease commencement dates (e.g., significantly before the average), 
 especially if they seem inconsistent with typical construction timelines.
+
 
 ![image](https://github.com/user-attachments/assets/5e5b667e-b8d1-4860-88ab-bb0ef1db089e)
 
 
 7. Create plots for each categorical column, showing categorical feature distributions.
 
+
 ![image](https://github.com/user-attachments/assets/ccb3430f-5683-4f78-8055-a6957031dcc8)
 
+
 ![image](https://github.com/user-attachments/assets/ec7266aa-1ef3-4e56-b30e-7c442ae3d03a)
+
 
 ![image](https://github.com/user-attachments/assets/4ebf5db1-11ab-4253-83e0-b88d623aaa50)
 
@@ -205,7 +219,9 @@ especially if they seem inconsistent with typical construction timelines.
 
 9. Calculate and display correlations between numerical features and the target feature.
 
+
 ![image](https://github.com/user-attachments/assets/c72c3eea-861e-4a94-9902-3c11a9722ab3)
+
 
 ![image](https://github.com/user-attachments/assets/87f31343-2be4-41cb-a1aa-c7fc5e03b8df)
 
