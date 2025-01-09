@@ -42,7 +42,9 @@ Use Text to limit to split out the text. For XX months, change XX/10 to get deci
 
 8. Cleaning: 4 files are found with same headers and values are combined into one file named as "hdb.csv"
 
-The intention is to use it for PowerBI and Python analysis to gain useful insights into the HDB resale market.
+9. Cleaning: converting month object data type to datetime64 format.
+
+The intention is to use Python analysis to gain useful insights into the HDB resale market.
 
 
 1. Articulate the size and shape of the dataset AND
