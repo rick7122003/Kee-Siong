@@ -68,9 +68,13 @@ df.head( )
 
 ![image](https://github.com/user-attachments/assets/8cb8544c-1cec-4e5c-bd77-1c58d45d3add)
 
-hdb.info( )
+hdb.info( ) : Before "month"  data type as "object" is suitable for analysis
 
 ![image](https://github.com/user-attachments/assets/08fe7e95-a9b9-4966-a889-b0c63bc04306)
+
+print(df.info()) : Clean "month" from data type: "object" to "datetime 64 format"
+![image](https://github.com/user-attachments/assets/9dcf1e8a-b390-4418-92c6-d2dc78fdd589)
+
 
 
 3. Describe the data types of all features.
