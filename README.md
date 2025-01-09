@@ -31,7 +31,7 @@ For example: flat_type, street_name, storey_range, floor_area_sqm, flat_model, l
 
 3. Normalization: "floor_area_ Sqm", "remaining_lease", "lease_commence_date" and "resale_price" change to data type whole number format	
 
-4. Normalization: Data format is set to be in YYYY-MM format.
+4. Normalization: Data format is set to be in YYYY-MM format. i.e Change to Datetime64 on Python later.
 
 5. Cleaning: 2 files have missing column header on Remaining_lease (resale flat prices from Jan 2000 to Feb 2012 to Mar 2012 to Dec 2014)	
 
@@ -80,7 +80,8 @@ print(df.info()) : After Clean "month" from data type: "object" to "datetime 64 
 
 
 
-3. Describe the data types of all features.
+3. Describe the data types of all features (After Cleaning Completed).
+
 Data Types of Features:
 
 float64 (2 columns):
@@ -93,9 +94,8 @@ int64 (2 columns):
 lease commence date: The year in which the lease for the residential flat started.
 resale price: The price at which the residential flat was resold.
 
-object (7 columns):
+object (6 columns):
 
-month: The month of the transaction or record.
 town: The town or area where the residential flat is situated.
 flat type: The type of the residential flat, such as 1-room, 2-room, 3-room, etc.
 block: The block number or identifier of the residential unit.
@@ -103,6 +103,9 @@ street name: Name of the street where the property is located.
 storey range: The range of storeys where the residential flat is located in the building.
 flat model: The model or type of the residential flat, which indicates the layout and design.
 
+Datetime64 (1 column):
+
+month: The month of the transaction or record.
 
 4. Select a target column for analysis.
 
