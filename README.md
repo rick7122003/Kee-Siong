@@ -338,14 +338,14 @@ Mean Absolute Error (MAE): 54498.6556327262. This measures the average absolute 
 ![image](https://github.com/user-attachments/assets/bfaf8921-09be-47f5-b7f1-bb7913cc90b0)
 
 
-2. XXX Confusion Matrix:
+2. Random Forest Regressor Model:
 
 XXX 
 XXX
 XXX
 
 
-XXX Decision Tree Classification Model:
+3. Decision Tree Regressor Model:
 
 XXX
 XXX
