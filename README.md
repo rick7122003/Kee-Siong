@@ -268,7 +268,7 @@ Lineplots:
 a. Able to see trends over time, easy spot, thus prediction of future prices
 
 
-![image](https://github.com/user-attachments/assets/e17b62c7-a0b1-4977-8eb7-7521c8a36bc7)
+![image](https://github.com/user-attachments/assets/1622e997-bcdc-428a-9c39-9562fc483da2)
 
 
 ![image](https://github.com/user-attachments/assets/6adf904a-5aa6-49e4-b323-1b55b41e806b)
