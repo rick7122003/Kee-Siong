@@ -213,8 +213,7 @@ especially if they seem inconsistent with typical construction timelines.
 8. Generate appropriate charts for numerical features, both individually and in relation to the target column.
 
 
-![image](https://github.com/user-attachments/assets/fd0fa851-28cd-4ab3-a282-070927adae46)
-
+![image](https://github.com/user-attachments/assets/ce8f4264-c92a-42cb-a8e6-5ee56dbbb84d)
 
 
 9. Calculate and display correlations between numerical features and the target feature.
