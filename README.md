@@ -320,6 +320,21 @@ These values can be used to assess the model's accuracy and compare its performa
 The MAE provides another measure of prediction error, which may be more interpretable than MSE or RMSE as it represents the average absolute difference in resale price.
 
 
+Evaluation Metrics:
+
+
+Mean Squared Error (MSE): 5194369915.213859. This metric measures the average squared difference between the actual and predicted values. 
+A lower MSE generally indicates better performance.
+
+Root Mean Squared Error (RMSE): 72071.9773227699. This is the square root of MSE, providing an error value in the same units as the target variable (resale price).
+
+R-squared (R²): 0.8068809275566823. This metric represents the proportion of variance in the target variable explained by the model. 
+
+An R-squared of 0.806 indicates that the model explains approximately 80.6% of the variance in resale prices, which is a relatively good fit.
+
+Mean Absolute Error (MAE): 54498.6556327262. This measures the average absolute difference between actual and predicted values.
+
+
 ![image](https://github.com/user-attachments/assets/bfaf8921-09be-47f5-b7f1-bb7913cc90b0)
 
 
@@ -367,6 +382,16 @@ The confusion matrix shows that there are more false positives (instances predic
 Decision Tree Classification Model:
 
 
+Key Observation:
+
+
+The model appears to have reasonable accuracy in classifying resale prices as high or low.
+The recall for class 1 (high resale price) is relatively high (0.86), indicating the model is good at identifying instances of high resale prices. 
+However, the recall for class 0 (low resale price) is lower (0.62), indicating the model might miss some instances of low resale prices.
+The decision tree visualization provides insights into the factors that the model considers most important for making predictions. 
+For example, the feature age (lease period) seems to be a significant factor in the decision-making process.
+
+
 1. Decision Tree Classifier Results:
 
 
@@ -398,16 +423,6 @@ The tree diagram provides a visual representation of the decision-making process
 Each node represents a decision based on a specific feature (e.g., age < 5).
 The branches represent the possible outcomes of the decision.
 The leaves represent the final predicted class (high or low resale price).
-
-
-Interpretation:
-
-
-The model appears to have reasonable accuracy in classifying resale prices as high or low.
-The recall for class 1 (high resale price) is relatively high (0.86), indicating the model is good at identifying instances of high resale prices. 
-However, the recall for class 0 (low resale price) is lower (0.62), indicating the model might miss some instances of low resale prices.
-The decision tree visualization provides insights into the factors that the model considers most important for making predictions. 
-For example, the feature age (lease period) seems to be a significant factor in the decision-making process.
 
 
 ![image](https://github.com/user-attachments/assets/b0717803-16cb-4b19-8a3f-dbe88b36eeac)
