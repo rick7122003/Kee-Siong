@@ -251,13 +251,18 @@ b. Able to spot outliers and weak correlationship between variables
 Lineplots:
 a. Able to see trends over time, easy spot, thus prediction of future prices
 
+
 ![image](https://github.com/user-attachments/assets/e17b62c7-a0b1-4977-8eb7-7521c8a36bc7)
+
 
 ![image](https://github.com/user-attachments/assets/6adf904a-5aa6-49e4-b323-1b55b41e806b)
 
+
 ![image](https://github.com/user-attachments/assets/0e28db7f-1829-46c1-8461-ef85a2ff0b85)
 
-![image](https://github.com/user-attachments/assets/0c46b568-8466-4b59-9d1e-1fc5c7b1f6c1)
+
+![image](https://github.com/user-attachments/assets/a4b18a1f-775b-4393-90b2-be9452d313a8)
+
 
 ![image](https://github.com/user-attachments/assets/6efebefc-32cc-48bd-b443-6a31c2554067)
 
@@ -268,6 +273,52 @@ Build a model suited to the project's needs and evaluate its performance using a
 (e.g., accuracy, precision, recall, F1). If certain metrics are solely ideal, it is expected that this will be mentioned by the candidate, 
 but still 3 metrics total must be presented, even if the remaining 2 are sub-optimal or not ideally suited for the task. 
 If the learners can draw an invidious distinction between the ideal metric and the others, they are encouraged to do so.
+
+
+Machine learning models: Regression model are suitable for predicting housing prices, regression models are generally the most suitable type of machine learning model.
+
+a. Regression models are designed to predict continuous values i.e. housing prices. 
+b. Housing prices are not discrete categories but rather a continuous range of values.   
+
+Machine learning models: Classification models (i.e. Logistic Regression or Decision Trees Model) can be used to predict categories
+(e.g. high price vs. low price). Not ideal for directly predicting the actual resale price, which is a continuous value.
+
+
+In summary:
+
+
+The choice of the specific regression model will depend on factors like the complexity of the data, 
+the presence of multicollinearity, and the desired level of interpretability.   
+
+Linear Regression Model:
+
+
+XX
+
+![image](https://github.com/user-attachments/assets/bfaf8921-09be-47f5-b7f1-bb7913cc90b0)
+
+
+Logistic Regression Model:
+
+
+XX
+
+![image](https://github.com/user-attachments/assets/e35b256e-243c-4d74-a892-67ca3113c0cb)
+
+
+
+Decision Tree Classification Model:
+
+
+XX
+
+![image](https://github.com/user-attachments/assets/b0717803-16cb-4b19-8a3f-dbe88b36eeac)
+
+
+![image](https://github.com/user-attachments/assets/e4c3c37a-4840-4f04-bcf3-129c27fd860b)
+
+
+
 
 5. Report Presentation:
 
