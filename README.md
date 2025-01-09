@@ -74,7 +74,8 @@ hdb.info( ) : Before "month"  data type as "object" is suitable for analysis
 
 ![image](https://github.com/user-attachments/assets/08fe7e95-a9b9-4966-a889-b0c63bc04306)
 
-print(df.info()) : Clean "month" from data type: "object" to "datetime 64 format"
+print(df.info()) : After Clean "month" from data type: "object" to "datetime 64 format"
+
 ![image](https://github.com/user-attachments/assets/9dcf1e8a-b390-4418-92c6-d2dc78fdd589)
 
 
