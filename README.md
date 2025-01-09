@@ -367,7 +367,48 @@ The confusion matrix shows that there are more false positives (instances predic
 Decision Tree Classification Model:
 
 
-XX
+1. Decision Tree Classifier Results:
+
+
+Accuracy: 0.73113. This indicates that the model correctly predicted the class (high or low resale price) for approximately 73.11% of the instances in the test set.
+
+Precision:
+For class 0 (low resale price): 0.79. This means that when the model predicts a resale price to be low, it is correct 79% of the time.
+For class 1 (high resale price): 0.66. This means that when the model predicts a resale price to be high, it is correct 66% of the time.
+
+Recall:
+For class 0: 0.62. This means the model correctly identifies 62% of all actual low-price instances.
+For class 1: 0.86. This means the model correctly identifies 86% of all actual high-price instances.
+
+F1-score:
+For class 0: 0.70. This is the harmonic mean of precision and recall for class 0.
+For class 1: 0.75. This is the harmonic mean of precision and recall for class 1.
+
+
+2. Confusion Matrix:
+
+The matrix shows the number of true positives (52460), true negatives (39457), false positives (9974), and false negatives (23828).
+The diagonal elements represent the number of correct predictions for each class.
+The off-diagonal elements represent the number of misclassifications.
+
+
+3. Decision Tree Visualization:
+
+The tree diagram provides a visual representation of the decision-making process of the model.
+Each node represents a decision based on a specific feature (e.g., age < 5).
+The branches represent the possible outcomes of the decision.
+The leaves represent the final predicted class (high or low resale price).
+
+
+Interpretation:
+
+
+The model appears to have reasonable accuracy in classifying resale prices as high or low.
+The recall for class 1 (high resale price) is relatively high (0.86), indicating the model is good at identifying instances of high resale prices. 
+However, the recall for class 0 (low resale price) is lower (0.62), indicating the model might miss some instances of low resale prices.
+The decision tree visualization provides insights into the factors that the model considers most important for making predictions. 
+For example, the feature age (lease period) seems to be a significant factor in the decision-making process.
+
 
 ![image](https://github.com/user-attachments/assets/b0717803-16cb-4b19-8a3f-dbe88b36eeac)
 
