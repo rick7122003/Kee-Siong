@@ -259,6 +259,7 @@ a. Able to see trends over time, easy spot, thus prediction of future prices
 
 ![image](https://github.com/user-attachments/assets/0c46b568-8466-4b59-9d1e-1fc5c7b1f6c1)
 
+![image](https://github.com/user-attachments/assets/6efebefc-32cc-48bd-b443-6a31c2554067)
 
 
 4. Model Development:
