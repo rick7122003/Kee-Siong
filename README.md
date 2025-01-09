@@ -309,7 +309,16 @@ the presence of multicollinearity, and the desired level of interpretability.  
 Linear Regression Model:
 
 
-XX
+Key Observations:
+
+Scatter Plot: The scatter plot shows a strong positive correlation between the Actual and Predicted Resale Prices. 
+Model is capturing the trend in the data. The points cluster around a diagonal line direction which makes predictions reasonably close to the actual values.
+The model appears to be performing reasonably well in predicting resale prices. The strong positive correlation in the scatter plot and 
+the relatively high R-squared value suggest that the model captures the underlying trends in the data.
+The MSE and RMSE values provide quantitative measures of the model's prediction error. 
+These values can be used to assess the model's accuracy and compare its performance with other models.
+The MAE provides another measure of prediction error, which may be more interpretable than MSE or RMSE as it represents the average absolute difference in resale price.
+
 
 ![image](https://github.com/user-attachments/assets/bfaf8921-09be-47f5-b7f1-bb7913cc90b0)
 
@@ -317,7 +326,39 @@ XX
 Logistic Regression Model:
 
 
-XX
+Key Observations:
+
+1. Classification Report:
+
+Accuracy: 0.7536. This indicates that the Logistic Regression model correctly predicted the class (high or low resale price) for approximately 75.36% of the instances in the test set.
+
+Precision:
+For class 0 (low resale price): 0.75. This means that when the model predicts a resale price to be low, it is correct 75% of the time.
+For class 1 (high resale price): 0.75. This means that when the model predicts a resale price to be high, it is correct 75% of the time.
+
+Recall:
+For class 0: 0.83. This means the model correctly identifies 83% of all actual low-price instances.
+For class 1: 0.65. This means the model correctly identifies 65% of all actual high-price instances.
+
+F1-score:
+For class 0: 0.79. This is the harmonic mean of precision and recall, providing a balanced measure of the model's performance for class 0.
+For class 1: 0.70. This is the harmonic mean of precision and recall for class 1.
+
+Support:
+Class 0: 78655 instances.
+Class 1: 55064 instances. This indicates the number of instances in each class within the test set.
+
+2. Confusion Matrix:
+
+The matrix shows the number of true positives (58933), true negatives (35810), false positives (11722), and false negatives (19254).
+The diagonal elements represent the number of correct predictions for each class.
+The off-diagonal elements represent the number of misclassifications.
+Interpretation:
+
+The model appears to have reasonable accuracy in classifying resale prices as high or low.
+The precision and recall for both classes are relatively similar, indicating a balanced performance.
+The confusion matrix shows that there are more false positives (instances predicted as high price but actually low) than false negatives.
+
 
 ![image](https://github.com/user-attachments/assets/e35b256e-243c-4d74-a892-67ca3113c0cb)
 
