@@ -290,20 +290,30 @@ but still 3 metrics total must be presented, even if the remaining 2 are sub-opt
 If the learners can draw an invidious distinction between the ideal metric and the others, they are encouraged to do so.
 
 
+Three Machine learning data models covered as follows:
+
+
+a. Linear Regression Model
+b. Random Forest Regressor Model
+c. Decision Tree Regressor Model
+
+
 Machine learning models: Regression model are suitable for predicting housing prices, regression models are generally the most suitable type of machine learning model.
 
 a. Regression models are designed to predict continuous values i.e. housing prices. 
 b. Housing prices are not discrete categories but rather a continuous range of values.   
 
 Machine learning models: Classification models (i.e. Logistic Regression or Decision Trees Model) can be used to predict categories
-(e.g. high price vs. low price). Not ideal for directly predicting the actual resale price, which is a continuous value.
+(e.g. high price vs. low price). In this report, it is NOT ideal for directly predicting the actual resale price, which is a continuous value.
 
 
 In summary:
 
 
 The choice of the specific regression model will depend on factors like the complexity of the data, 
-the presence of multicollinearity, and the desired level of interpretability.   
+the presence of multicollinearity, and the desired level of interpretability.
+We find the Linear Regression Model most suitable for HDB price prediction.
+
 
 Linear Regression Model:
 
