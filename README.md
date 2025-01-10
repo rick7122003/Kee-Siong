@@ -468,6 +468,7 @@ The model's accuracy is limited, and it explains only a small portion of the pri
 
 5. Report Presentation:
 
+
 Prepare a report in either Power BI (with at least three pages and a summary dashboard) or Jupyter Notebook (with at least five graphics). 
 Present the data insights in a storytelling format that is tailored to the target audience. 
 IT IS NOT A REQUIREMENT TO USE PRESENTATION OR SLIDESHARING SOFTWARE FOR THIS SECTION, but you may if you prefer.
@@ -475,6 +476,72 @@ IT IS NOT A REQUIREMENT TO USE PRESENTATION OR SLIDESHARING SOFTWARE FOR THIS SE
 Note: If the minimum criteria above are not met, the project will be deemed incomplete, and you will not pass the assessment.
 
 
+Overview and Data Summary
+
+
+Project Overview:
+- This analysis focuses on the HDB resale market from February 2000 to January 2024.
+- The dataset contains 628,591 rows and 11 columns, including town names, flat types, floor area, flat model, lease commence date, resale price, and remaining lease.
+
+
+Data Summary:
+
+
+- Data comprises HDB resale transactions, including town names, flat types, floor area, flat model, lease commence date, resale price, and remaining lease.
+- Data is pre-processed through normalization and cleaning to ensure readiness for analysis.
+- Missing data in remaining lease is handled by focusing on lease commence date instead.
+
+
+Data Characteristics and Quality
+
+
+Dataset Characteristics:
+
+
+- Size: 628,591 rows, 11 columns.
+- Memory usage: 52.8+ MB.
+- Data Types: 2 float64, 2 int64, 7 objects.
+- No null or empty values after cleaning.
+
+
+Descriptive Statistics:
+- The dataset is comprehensive, with no missing values post-cleaning.
+- The shape and memory usage make it suitable for detailed analysis.
+
+
+Outliers:
+- High prices (max: $1,500,000) and very low prices (min: $28,000) may indicate outliers.
+- Large flats (max: 297 sqm) and very small flats (min: 28 sqm) should be investigated for consistency.
+
+
+Insights and Model Development
+
+
+Key Correlations:
+- Floor area sqm and resale price show a strong positive correlation (0.53).
+- Lease commence date and resale price have a moderate positive correlation (0.47).
+
+
+Model Development:
+
+- Three models were evaluated: Linear Regression, Random Forest Regressor, and Decision Tree Regressor.
+- Linear Regression Model:
+  - R-squared: 0.806, indicating 80.6% variance explained.
+  - Metrics: MSE: 5,194,369,915, RMSE: 72,071.98, MAE: 54,498.66.
+- Random Forest Regressor Model:
+  - Key features: flat type and town.
+  - Limited predictive power with an R-squared of 0.089.
+- Decision Tree Regressor Model:
+  - Identified important features but had limited accuracy with an R-squared of 0.089.
+
+
+Conclusion:
+
+
+- Linear Regression Model is most suitable for predicting HDB resale prices.
+- Key insights include the significance of flat size and lease commencement date on resale prices.
+- Town location play importance with HDB resale prices
+- Further analysis can focus on improving model accuracy and exploring additional features.
 
 
 
