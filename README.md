@@ -339,16 +339,15 @@ Mean Absolute Error (MAE): 54498.6556327262. This measures the average absolute 
 
 2. Random Forest Regressor Model:
 
-XXX 
-XXX
-XXX
+
+![image](https://github.com/user-attachments/assets/c191b5cb-0413-406b-b1e2-40a8f0d478e3)
+
 
 
 3. Decision Tree Regressor Model:
 
-XXX
-XXX
-XXX
+
+![image](https://github.com/user-attachments/assets/72e0c646-c95f-4cdc-83d1-972282abddb8)
 
 
 
