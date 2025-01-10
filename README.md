@@ -334,7 +334,7 @@ An R-squared of 0.806 indicates that the model explains approximately 80.6% of t
 Mean Absolute Error (MAE): 54498.6556327262. This measures the average absolute difference between actual and predicted values.
 
 
-![image](https://github.com/user-attachments/assets/bc7306d0-07b5-4e94-93e3-85996b0efc3b)
+![image](https://github.com/user-attachments/assets/84f194dd-d2e1-4f59-9f8a-b374ebedfe1f)
 
 
 
