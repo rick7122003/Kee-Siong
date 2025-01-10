@@ -325,6 +325,7 @@ We find the Linear Regression Model most suitable for HDB price prediction.
 
 Linear Regression Model:
 
+![image](https://github.com/user-attachments/assets/84f194dd-d2e1-4f59-9f8a-b374ebedfe1f)
 
 Key Observations:
 
@@ -353,22 +354,116 @@ An R-squared of 0.806 indicates that the model explains approximately 80.6% of t
 Mean Absolute Error (MAE): 54498.6556327262. This measures the average absolute difference between actual and predicted values.
 
 
-![image](https://github.com/user-attachments/assets/84f194dd-d2e1-4f59-9f8a-b374ebedfe1f)
-
-
 
 2. Random Forest Regressor Model:
+
 
 
 ![image](https://github.com/user-attachments/assets/c191b5cb-0413-406b-b1e2-40a8f0d478e3)
 
 
+Key Observations:
+
+
+Chart visually represents the relative importance of different features in predicting HDB resale prices using a Random Forest Regressor model. 
+Features are ranked based on their contribution to the model's accuracy.
+
+flat type 3 ROOM appears to be the most important feature, indicating number of rooms (specifically 3-room flats) has the highest impact on resale prices.
+Other significant features:
+
+flat type 4 ROOM, flat type 5 ROOM, flat type 2 ROOM, and flat type EXECUTIVE, indicate number of rooms in general is a significant factor.
+Several town features (e.g., town_BUKIT TIMAH, town_BUKIT MERAH, town_QUEENSTOWN) also have relatively high importance, indicating that location plays a crucial role in determining resale prices.
+
+
+Feature Groups:
+
+
+flat type features as a group are highly influential, emphasizing the importance of flat size in predicting resale prices.
+town features also form a significant group, highlighting the impact of location on resale values.
+flat model features have varying levels of importance, with some models having a greater impact than others.
+
+
+Model accuracy and featured importance to model building:
+
+
+Model Accuracy: The model's performance metrics (Mean Squared Error, Root Mean Squared Error, R-squared, Mean Absolute Error) 
+can be used to assess its accuracy in predicting resale prices. 
+A higher R-squared value generally indicates a better fit of the model to the data.
+
+Feature Importance for Model Building: The chart provides valuable insights for feature selection and model building. 
+By focusing on the most important features, model builders can potentially improve accuracy and efficiency.
+
+
+Metrics Analysis:
+
+
+Mean Squared Error (MSE): This metric measures the average squared difference between the predicted and actual resale prices. 
+A lower MSE indicates better model performance. In this case, the MSE is quite high, suggesting that the model might not be making very accurate predictions.
+
+Root Mean Squared Error (RMSE): The RMSE is the square root of the MSE. It provides a measure of the average error in the same units as the target variable (resale price). A lower RMSE is generally preferred.
+
+R-squared (R2): This metric indicates the proportion of variance in the target variable (resale price) that is explained by the model. 
+An R2 value of 0.089 means that only about 8.9% of the price variation is explained by the model, suggesting that it has limited predictive power.
+
+Mean Absolute Error (MAE): This metric measures the average absolute difference between the predicted and actual prices. A lower MAE indicates better model accuracy in terms of predicting the magnitude of the error.
+
 
 3. Decision Tree Regressor Model:
 
 
+
 ![image](https://github.com/user-attachments/assets/72e0c646-c95f-4cdc-83d1-972282abddb8)
 
+Model Evaluation:
+
+
+Key Observations:
+
+The chart visually represents the relative importance of different features in predicting HDB resale prices. 
+Features with longer bars have a greater influence on the model's predictions.
+
+
+Top Features:
+
+
+Flat Type: 3 ROOM, 4 ROOM, and 5 ROOM flat types have the highest feature importance, suggesting that the number of rooms is a strong predictor of resale price.
+Town: Locations like BUKIT MERAH, QUEENSTOWN, and BISHAN also have significant influence, indicating that location plays a crucial role in determining resale values.
+
+
+Other Influential Features:
+
+Flat Model: Specific flat models like Improved-Maisonette, Premium Maisonette, and 3Gen appear to have a moderate impact on resale prices.
+Year and Month: These temporal features likely capture market trends and seasonal variations in prices.
+
+
+Metrics Analysis:
+
+
+Mean Squared Error (MSE):
+
+This metric measures the average squared difference between the predicted and actual resale prices. A lower MSE indicates better model performance. 
+In this case, the MSE is quite high, suggesting that the model might not be making very accurate predictions.
+
+Root Mean Squared Error (RMSE):
+
+The RMSE is the square root of the MSE. It provides a measure of the average error in the same units as the target variable (resale price). A lower RMSE is generally preferred.
+
+
+R-squared (R2): 
+
+This metric indicates the proportion of variance in the target variable (resale price) that is explained by the model.
+An R2 value of 0.089 means that only about 8.9% of the price variation is explained by the model, suggesting that it has limited predictive power.
+
+
+Mean Absolute Error (MAE):
+
+This metric measures the average absolute difference between the predicted and actual prices.
+A lower MAE indicates better model accuracy in terms of predicting the magnitude of the error.
+
+
+Overall, the chart and metrics suggest that while the Decision Tree model identifies some important features, 
+it does not perform very well in predicting HDB resale prices.
+The model's accuracy is limited, and it explains only a small portion of the price variation.
 
 
 5. Report Presentation:
