@@ -294,14 +294,22 @@ Three Machine learning data models covered as follows:
 
 
 a. Linear Regression Model
+
+
 b. Random Forest Regressor Model
+
+
 c. Decision Tree Regressor Model
 
 
 Machine learning models: Regression model are suitable for predicting housing prices, regression models are generally the most suitable type of machine learning model.
 
+
 a. Regression models are designed to predict continuous values i.e. housing prices. 
+
+
 b. Housing prices are not discrete categories but rather a continuous range of values.   
+
 
 Machine learning models: Classification models (i.e. Logistic Regression or Decision Trees Model) can be used to predict categories
 (e.g. high price vs. low price). In this report, it is NOT ideal for directly predicting the actual resale price, which is a continuous value.
@@ -319,6 +327,7 @@ Linear Regression Model:
 
 
 Key Observations:
+
 
 Scatter Plot: The scatter plot shows a strong positive correlation between the Actual and Predicted Resale Prices. 
 Model is capturing the trend in the data. The points cluster around a diagonal line direction which makes predictions reasonably close to the actual values.
