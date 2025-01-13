@@ -3,6 +3,8 @@ SCTP Data Analyst Associate Capstone
 
 Data Analytics Dashboard and Exploration Data Analysis of HDB resale Market (2000 Jan to 2024 Jan)
 ![image](https://github.com/user-attachments/assets/99356a64-d893-49c6-b58c-de09370d4a62)
+Python Coding located at bottom section.
+
 
 Data Summary:
 Data comprise of HDB resale transaction prices from (2000 Jan to 2024 Jan). It include town names, flat types, floor area sqm, flat model,
