@@ -545,3 +545,593 @@ Conclusion:
 
 
 
+PYTHON CODING:
+
+
+import pandas as pd                     # library for data manipulation and preparation           
+import seaborn as sns                   # library for customized data visualization
+import plotly.express as px             # library for customized data visualization
+from matplotlib import pyplot as plt    # library for customized data visualization
+
+# To suppress scientific notations, if any.
+import numpy as np
+np.set_printoptions(suppress=True)
+
+# To filter out unnecessary warnings in the output
+import warnings
+warnings.filterwarnings("ignore")
+
+# Load the CSV file
+df = pd.read_csv('hdb.csv')
+
+# Convert 'month' column to datetime64 format
+df['month'] = pd.to_datetime(df['month'], format='%Y-%m') 
+
+# Print the DataFrame to verify the conversion
+print(df.head())
+
+hdb
+
+
+![image](https://github.com/user-attachments/assets/4f8e3490-527d-40a1-ba23-c0be390964f1)
+
+
+![image](https://github.com/user-attachments/assets/e3180f9d-a3ff-4faa-bb68-94a7e8ce9cf9)
+
+
+# Statistical description of the data
+
+hdb.describe()
+
+# Overall information about the dataset
+
+hdb.info()
+
+
+![image](https://github.com/user-attachments/assets/c955a1a3-9867-4b2e-8ef2-1a1538fbb1ce)
+
+
+# Convert 'month' column to datetime64 format
+df['month'] = pd.to_datetime(df['month'], format='%Y-%m') 
+
+# clean column month to datetime64 format
+
+print(df.info())
+
+
+![image](https://github.com/user-attachments/assets/3a203e31-81f6-41a4-9ba4-17098bc70b8b)
+
+
+# check for missing values
+
+df.isnull().sum()
+
+![image](https://github.com/user-attachments/assets/f69abc54-7459-47b5-8df2-d28f0a3a2c28)
+
+df.head()
+
+![image](https://github.com/user-attachments/assets/fefeeaa4-c629-4995-911e-59fe4c882faa)
+
+# Articulate the size and shape of the dataset :
+
+# Size: Total: 628591 rows | memory usage: 52.8+ MB
+# Shape: 11 columns: 7 objects, 2 Float64, 2 int64 | 628591 rows 
+
+# Comment on data quality with respect to null values or missing data :
+
+# Output shows no null or empty values after cleaning
+# Remove need for further data imputation and promote better analysis.
+
+# Statistical description of the data
+
+hdb.describe()
+
+![image](https://github.com/user-attachments/assets/f818d38a-38fc-49c8-a433-c4221302ca92)
+
+## Provide descriptive statistics and information for the entire dataset.
+
+# Display general information about the DataFrame
+print(df.info())
+
+![image](https://github.com/user-attachments/assets/2e67c237-d1c6-4c34-8ee5-fba538d99990)
+
+## Provide descriptive statistics and information for the entire dataset.
+
+# Descriptive statistics for numerical columns
+print(df.describe())
+
+# Descriptive statistics for categorical columns
+for column in df.select_dtypes(include=['object']):
+    print(f"\nDescriptive Statistics for {column}:")
+    print(df[column].value_counts())
+
+![image](https://github.com/user-attachments/assets/928d4db0-29a3-416e-b16c-36a7bda3787e)
+
+
+![image](https://github.com/user-attachments/assets/e8c8f658-5282-4138-9e22-a0217419d046)
+
+
+![image](https://github.com/user-attachments/assets/e01f18a7-cb20-4270-a822-59fa549f2ce7)
+
+
+## 7. Create plots for each categorical column, showing categorical feature distributions.
+
+## Flat type
+
+# Assuming 'df' is DataFrame and 'column_name' is the categorical column
+
+df['flat type'].value_counts().plot(kind='bar') 
+plt.figure(figsize=(10, 6))
+plt.show() 
+
+## town
+
+# Assuming 'df' is DataFrame and 'column_name' is the categorical column
+
+df['town'].value_counts().plot(kind='bar')
+plt.figure(figsize=(15, 15))
+plt.show() 
+
+## flat model
+
+# Create the bar chart
+plt.figure(figsize=(12, 6))  # Adjust figure size for better readability
+df['flat model'].value_counts().plot(kind='bar')
+
+# Customize the plot for better presentation
+plt.title(f'Distribution of {'flat model'}')  # Informative title
+plt.xlabel('flat model')  # Clear x-axis label
+plt.ylabel('Count')  # Clear y-axis label
+plt.xticks(rotation=45, ha='right')  # Rotate x-axis labels for readability
+plt.grid(axis='y', linestyle='--', alpha=0.7)  # Add subtle gridlines
+
+# Display the plot
+plt.tight_layout()  # Adjust spacing to prevent overlapping elements
+plt.show()
+
+
+![image](https://github.com/user-attachments/assets/e011e5c7-12b4-4546-9645-d874f862b5e4)
+
+
+![image](https://github.com/user-attachments/assets/fe52ca5b-d58c-4324-9d0c-504daa04ff9c)
+
+
+![image](https://github.com/user-attachments/assets/1596e60b-6223-4f84-be4e-d3be0f850884)
+
+
+# Histograms for 'floor area sqm' and 'lease commence date'
+fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 6))
+
+# Histogram for 'floor area sqm'
+sns.histplot(data=df, x='floor area sqm', kde=True, ax=axes[0])
+axes[0].set_title('Distribution of Floor Area (sqm)')
+axes[0].set_xlabel('Floor Area (sqm)')
+axes[0].set_ylabel('Frequency')
+
+# Histogram for 'lease commence date'
+sns.histplot(data=df, x='lease commence date', kde=True, ax=axes[1])
+axes[1].set_title('Distribution of Lease Commence Date')
+axes[1].set_xlabel('Lease Commence Date')
+axes[1].set_ylabel('Frequency')
+
+plt.tight_layout()
+plt.show()
+
+
+![image](https://github.com/user-attachments/assets/9ac4b01d-c67e-40d9-8efd-f03a7f2a3592)
+
+
+# List of categorical columns to plot
+categorical_columns = ['flat type', 'town', 'flat model']
+
+# Create subplots for each categorical column
+fig, axes = plt.subplots(nrows=len(categorical_columns), ncols=1, figsize=(10, 6*len(categorical_columns)))
+
+# Create countplots for each categorical column
+for i, col in enumerate(categorical_columns):
+    sns.countplot(x=col, data=df, ax=axes[i], color='blue')
+    axes[i].set_title(f'Distribution of {col}')
+    axes[i].set_xlabel(col)
+    axes[i].set_ylabel('Count')
+    axes[i].tick_params(axis='x', rotation=60) 
+
+plt.tight_layout()
+plt.show()
+
+
+![image](https://github.com/user-attachments/assets/67490d8f-7d43-488b-90f2-df4f68b11b81)
+
+
+![image](https://github.com/user-attachments/assets/5db6fde5-ca00-4d32-8ee1-816a888c1220)
+
+
+## Generate appropriate charts for numerical features, both individually and in relation to the target column.
+
+
+# Understanding the correlation between the variables
+
+sns.pairplot(data=hdb, hue="town");
+
+
+![image](https://github.com/user-attachments/assets/20402c64-ee0b-4cd2-848f-e8e4c3ff8ec4)
+
+
+# Correlation matrix
+
+num_cols = list()
+
+for column in df.columns:
+    if df[column].dtype != object:
+       num_cols.append(column)
+        
+correlation_matrix = df[num_cols].corr()
+sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+
+hdb.describe()
+
+
+![image](https://github.com/user-attachments/assets/bd0a7b2c-3ff0-43d3-9618-4c63cac47479)
+
+
+## 12. Visual Exploration:
+
+## Based on the project's objectives, create at least five visualizations using Python or Power BI. 
+## Explain your choice of visualization type and tool for each.
+
+
+# Clustermap of Correlations in HDB Dataset
+
+# Clean column names by stripping leading/trailing spaces
+df.columns = df.columns.str.strip()
+
+# Select numeric columns for correlation plot
+numeric_cols = df.select_dtypes(include=['float64', 'int64']).columns
+
+# Calculate the correlation matrix
+correlation_matrix = df[numeric_cols].corr()
+
+# Create a clustermap (heatmap with hierarchical clustering)
+sns.clustermap(correlation_matrix, annot=True, cmap='coolwarm', fmt='.2f', figsize=(10, 8))
+
+# Add title
+plt.suptitle('Clustermap of Correlations in HDB Dataset', y=1.02)
+
+# Display the plot
+plt.show()
+
+
+![image](https://github.com/user-attachments/assets/12c5e67d-96cb-4b84-95a1-5b88630d8135)
+
+
+# Load the dataset
+hdb = pd.read_csv("hdb.csv", names=['month', 'town', 'flat type', 'block', 'street name', 'storey range', 'floor area sqm', 'flat model', 'lease commence date', ' resale price ', 'remaining Lease'], header=0)
+
+# Convert 'month' to datetime for proper time series plotting
+hdb['month'] = pd.to_datetime(hdb['month'], format='%Y-%m')
+
+# 1. Line chart for "flat type" vs "resale price" over time
+
+# Group by 'month' and 'flat type', calculate mean resale price
+flat_type_avg_price = hdb.groupby(['month', 'flat type'])[' resale price '].mean().reset_index()
+
+# Create the line chart
+plt.figure(figsize=(12, 6))
+for flat_type in flat_type_avg_price['flat type'].unique():
+    data = flat_type_avg_price[flat_type_avg_price['flat type'] == flat_type]
+    plt.plot(data['month'], data[' resale price '], label=flat_type)
+
+plt.xlabel('Month')
+plt.ylabel('Average Resale Price')
+plt.title('Resale Price Trend by Flat Type Over Time')
+plt.legend()
+plt.xticks(rotation=45)
+plt.show()
+
+# 2. Line chart for "town" vs "resale price" over time
+
+# Group by 'month' and 'town', calculate mean resale price
+town_avg_price = hdb.groupby(['month', 'town'])[' resale price '].mean().reset_index()
+
+# Create the line chart
+plt.figure(figsize=(12, 6))
+for town in town_avg_price['town'].unique():
+    data = town_avg_price[town_avg_price['town'] == town]
+    plt.plot(data['month'], data[' resale price '], label=town)
+
+plt.xlabel('Month')
+plt.ylabel('Average Resale Price')
+plt.title('Resale Price Trend by Town Over Time')
+plt.legend()
+plt.xticks(rotation=45)
+plt.show()
+
+
+![image](https://github.com/user-attachments/assets/b73730db-4a59-4a7a-b90e-9eb92ff27f4d)
+
+
+![image](https://github.com/user-attachments/assets/5683d92d-d141-41d0-8503-c68a66878bbb)
+
+
+# Box plot of resale price by flat type
+plt.figure(figsize=(10, 6))
+sns.boxplot(x='flat type', y='resale price', data=hdb)
+plt.title('Resale Price Distribution by Flat Type')
+plt.xlabel('Flat Type')
+plt.ylabel('Resale Price (in $)')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+
+![image](https://github.com/user-attachments/assets/96b4c750-3089-47ed-85e7-e53bfbfe99c5)
+
+
+# Group by 'town' and calculate average resale price
+plt.figure(figsize=(10, 6))
+sns.barplot(x='town', y='resale price', data=hdb, estimator=lambda x: x.mean())
+plt.title('Median Price by Town')
+plt.xlabel('Town')
+plt.ylabel('Average Resale Price (in $)')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+
+![image](https://github.com/user-attachments/assets/72bf8614-45db-439e-9bcf-914dc0073dae)
+
+# Interactive scatter plot using "Plotly" visualization library
+
+# fig = px.scatter_matrix(hdb, width=800, height=800)
+# fig.show()
+
+
+## MACHINE LEARNING Model 1 - A Linear Regression model. Resales Price versus Flat Type over time
+
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load the data (Assuming 'hdb.csv' is in the same directory)
+df = pd.read_csv('hdb.csv')
+
+# Clean and preprocess data
+df.columns = df.columns.str.strip()
+df['month'] = pd.to_datetime(df['month'], format='%Y-%m')
+df['resale price'] = df['resale price'].replace(r'\$', '', regex=True).replace(r',', '', regex=True).astype(float)
+
+# Feature engineering: Create dummy variables for relevant features
+df = pd.get_dummies(df, columns=['flat type', 'town', 'flat model'], drop_first=True)
+
+# Extract year and month as separate features
+df['year'] = df['month'].dt.year
+df['month'] = df['month'].dt.month
+
+# Select features and target variable
+X = df[['year', 'month'] + [col for col in df.columns if col.startswith('flat type') or col.startswith('town') or col.startswith('flat model')]]
+y = df['resale price']
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a Linear Regression model
+model = LinearRegression()
+
+# Train the model
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Calculate evaluation metrics
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)  # Root Mean Squared Error
+r2 = r2_score(y_test, y_pred)
+mae = mean_absolute_error(y_test, y_pred)
+
+# Print evaluation metrics
+print(f"Mean Squared Error (MSE): {mse}")
+print(f"Root Mean Squared Error (RMSE): {rmse}")
+print(f"R-squared (R²): {r2}")
+print(f"Mean Absolute Error (MAE): {mae}")
+
+# Visualize predictions vs actual values
+plt.scatter(y_test, y_pred)
+plt.xlabel("Actual Resale Price")
+plt.ylabel("Predicted Resale Price")
+plt.title("Linear Regression model: Actual vs. Predicted Resale Price")
+plt.show()
+
+![image](https://github.com/user-attachments/assets/491f669e-2952-488b-98cb-94c2d08e9881)
+
+
+df.info()
+
+![image](https://github.com/user-attachments/assets/e9fd41fd-b754-42d1-ae73-5e1884861d88)
+
+
+## Machine Learning Model 2 - Random Forest Regressor Model
+
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load the data (Assuming 'hdb.csv' is in the same directory)
+df = pd.read_csv('hdb.csv')
+
+# Clean and preprocess data
+df.columns = df.columns.str.strip()
+df['month'] = pd.to_datetime(df['month'], format='%Y-%m')
+df['resale price'] = df['resale price'].replace(r'\$', '', regex=True).replace(r',', '', regex=True).astype(float)
+
+# Feature engineering: Create dummy variables for relevant features
+df = pd.get_dummies(df, columns=['flat type', 'town', 'flat model'], drop_first=True)
+
+# Extract year and month as separate features
+df['year'] = df['month'].dt.year
+df['month'] = df['month'].dt.month
+
+# Select features and target variable
+X = df[['year', 'month'] + [col for col in df.columns if col.startswith('flat type') or col.startswith('town') or col.startswith('flat model')]]
+y = df['resale price']
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a Random Forest Regressor model
+model = RandomForestRegressor(n_estimators=100, random_state=42)
+
+# Train the model
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Calculate evaluation metrics
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)  # Root Mean Squared Error
+r2 = r2_score(y_test, y_pred)
+mae = mean_absolute_error(y_test, y_pred)
+
+# Print evaluation metrics
+print(f"Mean Squared Error (MSE): {mse}")
+print(f"Root Mean Squared Error (RMSE): {rmse}")
+print(f"R-squared (R²): {r2}")
+print(f"Mean Absolute Error (MAE): {mae}")
+
+# Feature importance chart
+importances = model.feature_importances_
+indices = np.argsort(importances)[::-1]
+
+# Plot feature importances
+plt.figure(figsize=(12, 12))
+plt.title("Random Forest Regressor model: HDB Resale price vs Feature Importances")
+plt.barh(range(len(indices)), importances[indices], align="center")
+plt.yticks(range(len(indices)), [X.columns[i] for i in indices])
+plt.xlabel("Relative Importance")
+plt.show()
+
+![image](https://github.com/user-attachments/assets/92f4f35f-d088-410b-ad14-ad897770abe5)
+
+
+## Machine Learning Model 3 - Decision Tree Regressor Model
+
+
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Load the data (Assuming 'hdb.csv' is in the same directory)
+df = pd.read_csv('hdb.csv')
+
+# Clean and preprocess data
+df.columns = df.columns.str.strip()  # Clean column names
+df['month'] = pd.to_datetime(df['month'], format='%Y-%m')
+df['resale price'] = df['resale price'].replace(r'\$', '', regex=True).replace(r',', '', regex=True).astype(float)
+
+# Feature engineering: Create dummy variables for relevant features
+df = pd.get_dummies(df, columns=['flat type', 'town', 'flat model'], drop_first=True)
+
+# Extract year and month as separate features
+df['year'] = df['month'].dt.year
+df['month'] = df['month'].dt.month
+
+# Select features and target variable
+X = df[['year', 'month'] + [col for col in df.columns if col.startswith('flat type') or col.startswith('town') or col.startswith('flat model')]]
+y = df['resale price']
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a Decision Tree Regressor model
+model = DecisionTreeRegressor(random_state=42)
+
+# Train the model
+model.fit(X_train, y_train)
+
+# Make predictions
+y_pred = model.predict(X_test)
+
+# Calculate evaluation metrics
+mse = mean_squared_error(y_test, y_pred)
+rmse = np.sqrt(mse)  # Root Mean Squared Error
+r2 = r2_score(y_test, y_pred)
+mae = mean_absolute_error(y_test, y_pred)
+
+# Print evaluation metrics
+print(f"Mean Squared Error (MSE): {mse}")
+print(f"Root Mean Squared Error (RMSE): {rmse}")
+print(f"R-squared (R²): {r2}")
+print(f"Mean Absolute Error (MAE): {mae}")
+
+# Feature importance chart
+importances = model.feature_importances_
+indices = np.argsort(importances)[::-1]
+
+# Plot feature importances
+plt.figure(figsize=(15, 12))
+plt.title("Decision Tree Regressor model: HDB Resale price vs Feature Importances")
+plt.barh(range(len(indices)), importances[indices], align="center")
+plt.yticks(range(len(indices)), [X.columns[i] for i in indices])
+plt.xlabel("Relative Importance")
+plt.show()
+
+
+# Provide solid Decision Tree-based model to predict resale prices, along with clear evaluations and insights into the most important features.
+
+
+![image](https://github.com/user-attachments/assets/bd100fcb-964c-4f7c-9fa0-34061ccc9256)
+
+
+EXTRA INFORMATION:
+
+ML links for regression model for resale price:
+https://scikit-learn.org/1.5/supervised_learning.html
+https://scikit-learn.org/1.5/modules/generated/sklearn.ensemble.RandomForestRegressor.html
+https://scikit-learn.org/dev/modules/generated/sklearn.ensemble.GradientBoostingRegressor.html
+https://scikit-learn.org/dev/modules/generated/sklearn.tree.DecisionTreeRegressor.html
+
+five commonly used regression models for predicting property prices:
+
+1. Linear Regression
+Description: A simple model that assumes a linear relationship between the input features (e.g., square footage, number of rooms) and 
+the target variable (property price).
+When to Use: It's a good starting point for regression tasks but may not capture non-linear relationships effectively.
+
+2. Random Forest Regressor
+Description: An ensemble model that constructs multiple decision trees and combines their outputs. 
+Random Forest models can handle both linear and non-linear relationships.
+When to Use: Effective for handling high-dimensional data, capturing interactions between features, and dealing with non-linearities in property prices.
+
+3. Decision Tree Regressor
+Description: A non-linear model that splits the data into subsets based on feature values.
+It's easy to interpret but can overfit if not tuned properly.
+When to Use: Suitable for smaller datasets or when interpretability is crucial. It can capture complex relationships but 
+may require pruning to prevent overfitting.
+
+4. Gradient Boosting Regressor (e.g., XGBoost, LightGBM)
+Description: A boosting technique that combines weak models (typically decision trees) to create a strong predictor. 
+Models like XGBoost and LightGBM are highly efficient and effective for regression tasks.
+When to Use: Excellent for high-dimensional datasets and complex relationships, providing state-of-the-art performance for property price predictions.
+
+5. Support Vector Regression (SVR)
+Description: A version of support vector machines designed for regression tasks. SVR tries to find a hyperplane that best fits 
+the data within a certain margin.
+When to Use: Best for datasets with smaller sample sizes, where the relationship between features and prices is complex and non-linear.
+Each of these models can be effective for property price prediction depending on the characteristics of your data (such as size, 
+non-linearity, and noise levels).
+
+
+# End of Machine Learning Models
