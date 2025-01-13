@@ -303,7 +303,7 @@ Three Machine learning data models covered as follows:
 a. Linear Regression Model
 
 
-b. Random Forest Regressor Model
+b. Random Forest Regressor Modec
 
 
 c. Decision Tree Regressor Model
@@ -327,15 +327,21 @@ In summary:
 
 The choice of the specific regression model will depend on factors like the complexity of the data, 
 the presence of multicollinearity, and the desired level of interpretability.
-We find the Linear Regression Model most suitable for HDB price prediction.
+
+We find Random Forest Regressor Model more suitable for predicting resale prices
+
 
 
 Linear Regression Model:
 
-![image](https://github.com/user-attachments/assets/84f194dd-d2e1-4f59-9f8a-b374ebedfe1f)
+![image](https://github.com/user-attachments/assets/4afecc42-331d-40c8-9e7c-23c85e32f7c2)
+
+Mean Squared Error (MSE): 5134414620.666957
+Root Mean Squared Error (RMSE): 71654.82970928727
+R-squared (R²): 0.8091099776743974
+Mean Absolute Error (MAE): 53928.529820299846
 
 Key Observations:
-
 
 Scatter Plot: The scatter plot shows a strong positive correlation between the Actual and Predicted Resale Prices. 
 Model is capturing the trend in the data. The points cluster around a diagonal line direction which makes predictions reasonably close to the actual values.
@@ -345,20 +351,21 @@ The MSE and RMSE values provide quantitative measures of the model's prediction 
 These values can be used to assess the model's accuracy and compare its performance with other models.
 The MAE provides another measure of prediction error, which may be more interpretable than MSE or RMSE as it represents the average absolute difference in resale price.
 
+Mean Absolute Error (MAE): 53928.529820299846 represents high degree of error, making this model not preferred.
 
 Evaluation Metrics:
 
 
-Mean Squared Error (MSE): 5194369915.213859. This metric measures the average squared difference between the actual and predicted values. 
+Mean Squared Error (MSE): 5134414620.666957. This metric measures the average squared difference between the actual and predicted values. 
 A lower MSE generally indicates better performance.
 
-Root Mean Squared Error (RMSE): 72071.9773227699. This is the square root of MSE, providing an error value in the same units as the target variable (resale price).
+Root Mean Squared Error (RMSE): 71654.82970928727. This is the square root of MSE, providing an error value in the same units as the target variable (resale price).
 
-R-squared (R²): 0.8068809275566823. This metric represents the proportion of variance in the target variable explained by the model. 
+R-squared (R²): 0.8091099776743974. This metric represents the proportion of variance in the target variable explained by the model. 
 
 An R-squared of 0.806 indicates that the model explains approximately 80.6% of the variance in resale prices, which is a relatively good fit.
 
-Mean Absolute Error (MAE): 54498.6556327262. This measures the average absolute difference between actual and predicted values.
+Mean Absolute Error (MAE): 53928.529820299846. This measures the average absolute difference between actual and predicted values.
 
 
 
@@ -368,6 +375,10 @@ Mean Absolute Error (MAE): 54498.6556327262. This measures the average absolute 
 
 ![image](https://github.com/user-attachments/assets/c191b5cb-0413-406b-b1e2-40a8f0d478e3)
 
+Mean Squared Error (MSE): 1923369010.6336012
+Root Mean Squared Error (RMSE): 43856.231149445586
+R-squared (R²): 0.9284919546811886
+Mean Absolute Error (MAE): 29068.59044440389
 
 Key Observations:
 
@@ -410,9 +421,10 @@ A lower MSE indicates better model performance. In this case, the MSE is quite h
 Root Mean Squared Error (RMSE): The RMSE is the square root of the MSE. It provides a measure of the average error in the same units as the target variable (resale price). A lower RMSE is generally preferred.
 
 R-squared (R2): This metric indicates the proportion of variance in the target variable (resale price) that is explained by the model. 
-An R2 value of 0.089 means that only about 8.9% of the price variation is explained by the model, suggesting that it has limited predictive power.
+An R2 value of 0.92 means that model has high predicting power.
 
-Mean Absolute Error (MAE): This metric measures the average absolute difference between the predicted and actual prices. A lower MAE indicates better model accuracy in terms of predicting the magnitude of the error.
+Mean Absolute Error (MAE): Value at 29068.59, measures the average absolute difference between the predicted and actual prices. 
+This has the lowest error among the three model tested.
 
 
 3. Decision Tree Regressor Model:
@@ -420,6 +432,12 @@ Mean Absolute Error (MAE): This metric measures the average absolute difference 
 
 
 ![image](https://github.com/user-attachments/assets/72e0c646-c95f-4cdc-83d1-972282abddb8)
+
+Mean Squared Error (MSE): 2029172233.9206219
+Root Mean Squared Error (RMSE): 45046.33430059123
+R-squared (R²): 0.9245583456629212
+Mean Absolute Error (MAE): 29603.448675395186
+
 
 Model Evaluation:
 
@@ -459,18 +477,18 @@ The RMSE is the square root of the MSE. It provides a measure of the average err
 R-squared (R2): 
 
 This metric indicates the proportion of variance in the target variable (resale price) that is explained by the model.
-An R2 value of 0.089 means that only about 8.9% of the price variation is explained by the model, suggesting that it has limited predictive power.
+0.92 value shows promising similar values as Random Forest Regressor model.
 
 
 Mean Absolute Error (MAE):
 
 This metric measures the average absolute difference between the predicted and actual prices.
 A lower MAE indicates better model accuracy in terms of predicting the magnitude of the error.
-
+MAE: 29603.44 shows magnitude error of higher value versus Random Forest Regressor model and Linear Regression model.
 
 Overall, the chart and metrics suggest that while the Decision Tree model identifies some important features, 
 it does not perform very well in predicting HDB resale prices.
-The model's accuracy is limited, and it explains only a small portion of the price variation.
+The model's magnitude error is not ideal when compare to Random Forest Regressor model.
 
 
 5. Report Presentation:
@@ -899,50 +917,58 @@ plt.show()
 # fig.show()
 
 
+=======================================================================================================================================================================================================================================
+
+
+
 ## MACHINE LEARNING Model 1 - A Linear Regression model. Resales Price versus Flat Type over time
 
 
+
+=======================================================================================================================================================================================================================================
+
+
 import pandas as pd
+import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import seaborn as sns
 import matplotlib.pyplot as plt
-import numpy as np
 
-# Load the data (Assuming 'hdb.csv' is in the same directory)
+# Load the dataset (assuming it's stored in 'hdb.csv')
 df = pd.read_csv('hdb.csv')
 
-# Clean and preprocess data
-df.columns = df.columns.str.strip()
-df['month'] = pd.to_datetime(df['month'], format='%Y-%m')
-df['resale price'] = df['resale price'].replace(r'\$', '', regex=True).replace(r',', '', regex=True).astype(float)
+# Step 1: Data Preprocessing
+df.columns = df.columns.str.strip()  # Clean column names
+df['month'] = pd.to_datetime(df['month'], format='%Y-%m')  # Convert 'month' to datetime
+df['resale price'] = df['resale price'].astype(float)  # Ensure 'resale price' is float
 
-# Feature engineering: Create dummy variables for relevant features
-df = pd.get_dummies(df, columns=['flat type', 'town', 'flat model'], drop_first=True)
+# One-hot encode categorical features
+df = pd.get_dummies(df, columns=['town', 'flat type', 'flat model'], drop_first=True)
 
-# Extract year and month as separate features
+# Extract year and month from 'month'
 df['year'] = df['month'].dt.year
 df['month'] = df['month'].dt.month
 
-# Select features and target variable
-X = df[['year', 'month'] + [col for col in df.columns if col.startswith('flat type') or col.startswith('town') or col.startswith('flat model')]]
+# Define features (X) and target variable (y)
+X = df[['year', 'month', 'floor area sqm', 'remaining Lease'] + 
+       [col for col in df.columns if col.startswith(('town', 'flat type', 'flat model'))]]
 y = df['resale price']
 
-# Split data into training and testing sets
+# Step 2: Train-Test Split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Create a Linear Regression model
+# Step 3: Model Training
 model = LinearRegression()
-
-# Train the model
 model.fit(X_train, y_train)
 
-# Make predictions
+# Step 4: Predictions
 y_pred = model.predict(X_test)
 
-# Calculate evaluation metrics
+# Step 5: Evaluation Metrics
 mse = mean_squared_error(y_test, y_pred)
-rmse = np.sqrt(mse)  # Root Mean Squared Error
+rmse = np.sqrt(mse)
 r2 = r2_score(y_test, y_pred)
 mae = mean_absolute_error(y_test, y_pred)
 
@@ -952,14 +978,26 @@ print(f"Root Mean Squared Error (RMSE): {rmse}")
 print(f"R-squared (R²): {r2}")
 print(f"Mean Absolute Error (MAE): {mae}")
 
-# Visualize predictions vs actual values
-plt.scatter(y_test, y_pred)
-plt.xlabel("Actual Resale Price")
-plt.ylabel("Predicted Resale Price")
-plt.title("Linear Regression model: Actual vs. Predicted Resale Price")
+# Step 6: Visualization - Scatter Plot with Regression Line using seaborn
+sns.scatterplot(x=y_test, y=y_pred, alpha=0.6, label='Predicted Values')
+
+# Regression line
+x_values = np.array([y_test.min(), y_test.max()])
+y_values = x_values  # Regression line: y_pred = y_test
+
+sns.lineplot(x=x_values, y=y_values, color='red', label='Regression Line')
+
+# Set plot labels and title
+plt.xlabel('Actual Resale Price')
+plt.ylabel('Predicted Resale Price')
+plt.title('Actual vs Predicted Resale Price')
+plt.legend()
 plt.show()
 
-![image](https://github.com/user-attachments/assets/491f669e-2952-488b-98cb-94c2d08e9881)
+
+![image](https://github.com/user-attachments/assets/fdd8318b-0101-43b0-a5e4-0fe98c1ecc62)
+
+
 
 
 df.info()
