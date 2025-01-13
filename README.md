@@ -284,6 +284,11 @@ a. Able to see trends over time, easy spot, thus prediction of future prices
 ![image](https://github.com/user-attachments/assets/6efebefc-32cc-48bd-b443-6a31c2554067)
 
 
+
+![image](https://github.com/user-attachments/assets/4632cd9d-c646-496a-a948-58e87cbae208)
+
+
+
 4. Model Development:
 
 Build a model suited to the project's needs and evaluate its performance using at least three metrics appropriate to regression or classification 
